@@ -249,7 +249,7 @@ class Trainer(object):
                 g_loss.backward()
                 self.optimG.step()
 
-                if iteration % 5 == 0:
+                if iteration % 20 == 0:
                     self.logger.log_iteration_gan(epoch,d_loss, g_loss, real_score, fake_score)
                     self.logger.draw(right_images, fake_images)
 
